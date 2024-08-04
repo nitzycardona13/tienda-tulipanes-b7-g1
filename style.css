@@ -1,0 +1,230 @@
+header{
+    display: flex;
+    justify-content: space-between;
+}
+
+body{
+    font-family: "Montserrat", sans-serif;
+}
+
+.BarraDeAnuncios {
+    font-size: 13px;
+    position: relative;
+    text-align: center;
+    z-index: 1;
+}
+
+.BarraDeAnuncios_Envoltura {
+    padding: 15px 15px;
+}
+
+.BarraDeAnuncios_Contenido {
+    color: inherit;
+    margin: 0;
+}
+
+#seccion-anuncio {
+    background: #f2f2f2;
+    color: #000000;
+}
+
+a {
+    color: inherit;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.logoCenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#logo{
+    width: 200px;
+    padding-bottom: 10px;
+}
+
+.desplegable button {
+    margin-inline-start: 50px;
+    background-color: #fff;
+    color: rgb(112, 109, 109);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 13px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.contenido-desplegable {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.contenido-desplegable a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.contenido-desplegable a:hover {
+    background-color: #f1f1f1;
+}
+
+.desplegable:hover .contenido-desplegable {
+    display: block;
+}
+
+
+#navegacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    border-bottom: 1px solid #ccc; 
+    padding-bottom: 20px;
+}
+
+#navegacion li {
+    display: inline-block;
+    margin-right: 50px;
+    font-family: "Montserrat", sans-serif;
+    color: rgb(112, 109, 109);
+    font-size: 13px;
+}
+
+
+#compras {
+    margin-inline-end: 50px;
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+}
+
+#compras li {
+    display: inline-block;
+    margin-right: 20px;
+    font-family: "Montserrat", sans-serif;
+    color: rgb(112, 109, 109);
+    font-size: 13px;
+}
+
+.parrafoTulipanes{
+    padding-top: 15px;
+    color: rgb(112, 109, 109);
+    font-size: 20px;
+    text-align: center;
+    padding-block-end: 20px;
+    border-bottom: 1px solid #ccc; 
+}
+
+#parrafoTulipanesPequeno{
+    font-size: 14px;
+    margin-left: 450px;
+    margin-right: 450px;
+    line-height: 2;
+}
+
+#centrarImagenes{
+    margin-left: 90px;
+    margin-right: 90px;
+}
+
+#centrarImagenes p{
+    text-align: center;
+    margin-top: 40px;
+}
+
+
+footer {
+    background-color: #f8f8f8;
+    padding: 40px 0;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.footer-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-columna {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px 0;
+}
+
+.footer-columna h3 {
+    margin-top: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.footer-columna p, .footer-columna a {
+    font-size: 14px;
+    color: #555;
+    text-decoration: none;
+}
+
+.footer-columna a:hover {
+    text-decoration: underline;
+}
+
+.footer-suscripcion {
+    text-align: left;
+}
+
+.footer-suscripcion input[type="email"] {
+    padding: 10px;
+    width: calc(100% - 22px);
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.footer-suscripcion button {
+    padding: 10px 20px;
+    background-color: #cca5cb;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.footer-suscripcion button:hover {
+    background-color: #ccc;
+}
+
+.footer-social {
+    margin-top: 20px;
+    margin-block-end: 20px;
+
+}
+
+.footer-social a {
+    font-size: 10px;
+    margin: 0 10px;
+    color: #555;
+}
+
+.footer-social img {
+    width: 34px;
+    height: 34px;
+}
+
+.footer-inferior {
+    text-align: center;
+    padding: 20px;
+    background-color: #e8e8e8;
+    font-size: 12px;
+    color: #aaa;
+}
