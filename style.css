@@ -1,21 +1,29 @@
-header{
+/* Estilos globales */
+body {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Encabezado */
+header {
     display: flex;
     justify-content: space-between;
+    padding: 10px;
+    flex-wrap: wrap; /* Para que se adapte mejor en pantallas pequeñas */
 }
 
-body{
-    font-family: "Montserrat", sans-serif;
-}
-
+/* Barra de anuncios */
 .BarraDeAnuncios {
     font-size: 13px;
     position: relative;
     text-align: center;
     z-index: 1;
+    padding: 10px;
 }
 
 .BarraDeAnuncios_Envoltura {
-    padding: 15px 15px;
+    padding: 15px;
 }
 
 .BarraDeAnuncios_Contenido {
@@ -23,6 +31,7 @@ body{
     margin: 0;
 }
 
+/* Sección de anuncio */
 #seccion-anuncio {
     background: #f2f2f2;
     color: #000000;
@@ -34,18 +43,20 @@ a {
     text-decoration: none;
 }
 
-.logoCenter{
+/* Logo centrado */
+.logoCenter {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
-#logo{
+#logo {
     width: 200px;
     padding-bottom: 10px;
+    max-width: 100%; /* Para que se ajuste al contenedor */
 }
 
+/* Desplegable */
 .desplegable button {
     margin-inline-start: 50px;
     background-color: #fff;
@@ -81,7 +92,7 @@ a {
     display: block;
 }
 
-
+/* Navegación */
 #navegacion {
     display: flex;
     justify-content: center;
@@ -89,62 +100,115 @@ a {
     list-style-type: none;
     border-bottom: 1px solid #ccc; 
     padding-bottom: 20px;
+    flex-wrap: wrap; /* Para que se adapte mejor en pantallas pequeñas */
 }
 
 #navegacion li {
-    display: inline-block;
-    margin-right: 50px;
+    margin: 10px 20px;
     font-family: "Montserrat", sans-serif;
     color: rgb(112, 109, 109);
     font-size: 13px;
 }
 
-
+/* Sección de compras */
 #compras {
     margin-inline-end: 50px;
     display: flex;
     justify-content: flex-end;
     list-style-type: none;
+    flex-wrap: wrap; /* Para que se adapte mejor en pantallas pequeñas */
 }
 
 #compras li {
-    display: inline-block;
-    margin-right: 20px;
+    margin: 10px 20px;
     font-family: "Montserrat", sans-serif;
     color: rgb(112, 109, 109);
     font-size: 13px;
 }
 
-.parrafoTulipanes{
+/* Párrafo de Tulipanes */
+.parrafoTulipanes {
     padding-top: 15px;
     color: rgb(112, 109, 109);
     font-size: 20px;
     text-align: center;
-    padding-block-end: 20px;
-    border-bottom: 1px solid #ccc; 
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
 }
 
-#parrafoTulipanesPequeno{
+#parrafoTulipanesPequeno {
     font-size: 14px;
-    margin-left: 450px;
-    margin-right: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90%;
     line-height: 2;
 }
 
-#centrarImagenes{
-    margin-left: 90px;
-    margin-right: 90px;
+#centrarImagenes {
+    margin: 0 auto;
+    max-width: 90%;
 }
 
-#centrarImagenes p{
+#centrarImagenes p {
     text-align: center;
     margin-top: 40px;
 }
 
+/* Sección de productos */
+.contenedor-productos {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
 
+.producto {
+    text-align: center;
+    max-width: 250px;
+}
+
+/* Efecto de agrandamiento */
+.producto img {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.producto.img-visible {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+
+.producto img {
+    width: 100%;
+    height: 400px; 
+    object-fit: cover; 
+    display: block;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease; 
+}
+
+.producto img:hover {
+    transform: scale(1.2); /* Aumenta el tamaño de la imagen al 110% */
+}
+
+.producto h3 {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 5px;
+}
+
+.producto span {
+    font-size: 18px;
+    color: #888;
+}
+
+
+/* Footer */
 footer {
     background-color: #f8f8f8;
-    padding: 40px 0;
+    padding: 40px 20px;
     text-align: center;
     margin-top: 50px;
 }
@@ -206,8 +270,7 @@ footer {
 
 .footer-social {
     margin-top: 20px;
-    margin-block-end: 20px;
-
+    margin-bottom: 20px;
 }
 
 .footer-social a {
@@ -227,4 +290,56 @@ footer {
     background-color: #e8e8e8;
     font-size: 12px;
     color: #aaa;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .desplegable button {
+        margin-inline-start: 0;
+        margin-top: 10px;
+    }
+
+    #navegacion li,
+    #compras li {
+        margin-right: 10px;
+        font-size: 12px;
+    }
+
+    .parrafoTulipanes {
+        font-size: 18px;
+    }
+
+    #parrafoTulipanesPequeno {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
+@media (max-width: 480px) {
+    #logo {
+        width: 150px;
+    }
+
+    .parrafoTulipanes {
+        font-size: 16px;
+    }
+
+    #parrafoTulipanesPequeno {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    #centrarImagenes p {
+        margin-top: 20px;
+    }
+
+    .footer-social img {
+        width: 30px;
+        height: 30px;
+    }
 }
